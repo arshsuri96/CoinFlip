@@ -74,7 +74,11 @@ contract CoinFlip is VRFV2WrapperConsumerBase{
 
         emit CoinFlipResult(requestId, status[requestId].didWin);
     }
-    
+
+    function StatusId(uint256 requestId) public view returns (CoinFlipStatus memory) {
+        return status[requestId];
+    }
+
 
 
 }
